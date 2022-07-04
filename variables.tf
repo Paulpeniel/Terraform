@@ -1,27 +1,33 @@
 variable "aws_region" {
-  description = "Region where you want to provision your infrastructure"
+  description = "Region where we will provision our infrastructure"
   type        = string
   default     = "us-east-1"
 }
 
-variable "port_list" {
-  description = "list of ports to open for our web server"
+variable "instance_size" {
+  description = "size of our EC2"
   type        = list(any)
-  default     = ["443", "80", "22"]
+  default     = "t2.mirco"
 }
 
-variable "instance_size" {
-  description = "EC2 instance size to provision"
-  type        = string
-  default     = "t3.micro"
+variable "key_name" {
+  description = "security key for our web server"
+  default     = "devops-keypair"
 }
 
 variable "tags" {
-  description = "tags to apply to resources"
-  type        = map(any)
+  description = "tags for our resources"
+  type        = string
   default = {
+    Name       = "Webserver"
     Owner      = "Paul Fomenji"
-    Enviroment = "Prod"
     Project    = "CCOE"
+    Enviroment = "Prod"
   }
+}
+
+variable "port_list" {
+  description = "ports to be opened on web server"
+  type        = map(any)
+  default     = ["80", "443", "22"]
 }
