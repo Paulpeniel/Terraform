@@ -11,3 +11,8 @@ output "server_id" {
 output "securitygroup_id" {
   value = aws_security_group.web.id
 }
+
+variable "key_name" {
+  type    = string
+  default = "devops-keypair"
+}
