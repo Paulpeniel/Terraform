@@ -1,0 +1,7 @@
+# autofill with variables from the cli
+# example
+$terraform apply -var="password=1234567890" -var="instance_size=t3.medium" 
+
+# exporting enviroment codes are another way for autofilling with variables. example
+$ export TF_VAR_password=1234567890
+$ export TF_VAR_insrance_size=t3.medium
