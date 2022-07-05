@@ -6,7 +6,7 @@ variable "aws_region" {
 
 variable "instance_size" {
   description = "size of our EC2"
-  type        = list(any)
+  type        = string
   default     = "t2.mirco"
 }
 
@@ -28,6 +28,6 @@ variable "tags" {
 
 variable "port_list" {
   description = "ports to be opened on web server"
-  type        = map(any)
+  type        = list(any)
   default     = ["80", "443", "22"]
 }
