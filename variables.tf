@@ -17,7 +17,7 @@ variable "key_name" {
 
 variable "tags" {
   description = "tags for our resources"
-  type        = string
+  type        = map(any)
   default = {
     Name       = "Webserver"
     Owner      = "Paul Fomenji"
