@@ -2,6 +2,7 @@
 # Building an infrastructure for CI/CD -Pipeline as code project
 # We will start by provisioning our VPC
 # - 2 or more subnets in 2 or more availability zones
+# By Paul Fomenji
 #---------------------------------------------------------------
 
 provider "aws" {
